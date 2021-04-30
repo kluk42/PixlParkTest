@@ -1,0 +1,41 @@
+.Order {
+    width: 90%;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    border: 1px solid black;
+    border-top: none;
+
+    &:last-of-type {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        border: 1px solid black;
+        border-left: none;
+        border-right: none;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid black;
+
+        &:last-of-type {
+            border-right: none;
+        }
+    }
+
+    &__fieldHeader {
+        border-bottom: 1px solid black;
+    }
+
+    &__fieldContent {
+        margin: auto 0;
+    }
+}
